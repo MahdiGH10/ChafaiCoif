@@ -50,16 +50,26 @@ export default function Hero() {
         position: 'relative',
         minHeight: '100svh',
         display: 'grid',
-        gridTemplateColumns: '1.2fr 0.8fr',
+        gridTemplateColumns: '1.3fr 0.7fr',
         alignItems: 'stretch',
         overflow: 'hidden',
       }}
     >
+      {/* VERTICAL DIVIDER — gradient bar between columns */}
+      <div aria-hidden="true" style={{
+        position: 'absolute', top: 0, bottom: 0,
+        left: '65%',
+        zIndex: 3, pointerEvents: 'none',
+        width: '1px',
+        background: 'linear-gradient(180deg, transparent 0%, var(--brass) 20%, var(--brass) 80%, transparent 100%)',
+        opacity: 0.12,
+      }} />
+
       {/* GRAIN OVERLAY */}
       <div
         aria-hidden="true"
         style={{
-          position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none',
+          position: 'absolute', inset: 0, zIndex: 4, pointerEvents: 'none',
           opacity: 0.25, mixBlendMode: 'overlay',
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")`,
           backgroundRepeat: 'repeat', backgroundSize: '256px 256px',
@@ -137,10 +147,11 @@ export default function Hero() {
             onClick={() => scrollTo('#reserver')}
             className="btn-primary"
             style={{
-              background: 'var(--accent)', color: 'var(--ink)',
-              padding: '1rem 2.2rem', fontSize: '0.85rem',
-              textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600,
+              background: 'linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%)',
+              color: 'var(--ink)', padding: '1rem 2.4rem', fontSize: '0.82rem',
+              textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 600,
               border: 0, borderRadius: '3px', position: 'relative', overflow: 'hidden',
+              boxShadow: '0 2px 16px rgba(196, 155, 94, 0.2)',
             }}
           >
             <span style={{ position: 'relative', zIndex: 1 }}>Prendre rendez-vous</span>
@@ -149,15 +160,15 @@ export default function Hero() {
             href="tel:+21621433555"
             className="mono"
             style={{
-              fontSize: '0.85rem', letterSpacing: '0.06em',
-              color: 'var(--ivory)', fontWeight: 500,
-              padding: '1rem 1.6rem',
-              border: '1px solid var(--line-strong)', borderRadius: '3px',
+              fontSize: '0.82rem', letterSpacing: '0.1em',
+              color: 'var(--ivory-dim)', fontWeight: 500,
+              padding: '1rem 1.8rem',
+              border: '1px solid rgba(169, 137, 90, 0.3)', borderRadius: '3px',
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
               transition: 'border-color 0.25s, background 0.25s, color 0.25s',
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--line-strong)'; e.currentTarget.style.color = 'var(--ivory)'; }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--ivory)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(169, 137, 90, 0.3)'; e.currentTarget.style.color = 'var(--ivory-dim)'; }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
