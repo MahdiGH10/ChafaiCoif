@@ -186,18 +186,19 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* RIGHT — FULL-BLEED EDITORIAL PHOTO WITH OVERLAYS */}
+      {/* RIGHT — FULL-BLEED LOGO REVEAL VIDEO */}
       <div className="hero-right" style={{
         position: 'relative', display: 'flex', alignItems: 'flex-end',
         borderInlineStart: '1px solid var(--line)', overflow: 'hidden',
       }}>
-        {/* Editorial photo (not logo) */}
+        {/* Logo reveal video */}
         <motion.div
           style={{ y: smoothParallax, position: 'absolute', inset: 0, zIndex: 1 }}
         >
-          <img
-            src="/images/insideview.jpg"
-            alt="Intérieur du salon Chafai Coiff"
+          <video
+            src="/videos/logo-reveal.mp4"
+            autoPlay muted loop playsInline
+            poster="/images/insideview.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </motion.div>
