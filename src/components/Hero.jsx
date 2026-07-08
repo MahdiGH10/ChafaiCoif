@@ -83,6 +83,7 @@ export default function Hero() {
           src="/videos/logo-reveal.mp4"
           autoPlay muted loop playsInline
           poster="/images/insideview.jpg"
+          preload="metadata"
           style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }}
         />
         <div style={{
@@ -218,6 +219,8 @@ export default function Hero() {
           <video
             src="/videos/logo-reveal.mp4"
             autoPlay muted loop playsInline
+            preload="metadata"
+            poster="/images/insideview.jpg"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </motion.div>
