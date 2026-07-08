@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Root working files (copies of public/ assets)
+After.jpg
+Before.jpg
+Logo.png
+Logo_reveal_bearded_man_text_202607080228.mp4
+Gemini_Generated_Image_*.png
+audit-*.png
+barberlogo.png
+insideview.jpg
