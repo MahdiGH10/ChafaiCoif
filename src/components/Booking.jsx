@@ -165,7 +165,7 @@ export default function Booking() {
                   display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
                   fontSize: '0.95rem', color: 'var(--ivory-dim)',
                 }}>
-                  → 2 Rue Taher Sfar, Nabeul
+                  → Avenue Mohamed Souissi, Nabeul
                 </span>
               </div>
 

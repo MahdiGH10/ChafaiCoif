@@ -43,7 +43,7 @@ export default function Footer() {
                 Chafai <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Coiff</em>
               </a>
               <p style={{ fontSize: '0.82rem', color: 'var(--ivory-dim)', marginTop: '0.4rem' }}>
-                2 Rue Taher Sfar, Nabeul · +216 21 433 555
+                Avenue Mohamed Souissi, Nabeul · +216 21 433 555
               </p>
               <p className="mono" style={{ marginTop: '0.6rem', fontSize: '0.72rem', color: 'var(--brass)', letterSpacing: '0.04em' }}>
                 « L'exigence n'a pas de prix » — Chafai Artist, est. 2004

@@ -3,9 +3,8 @@ import { motion, useTransform, useSpring } from 'framer-motion';
 import { useLenis } from '../context/LenisContext';
 
 const headlineLines = [
-  { text: "L'art du", italic: false },
-  { text: 'geste, à', italic: false },
-  { text: 'Nabeul', italic: true },
+  { text: 'Centre de coiffure', italic: false },
+  { text: 'et soin', italic: true },
 ];
 
 const containerVariants = {
@@ -105,7 +104,7 @@ export default function Hero() {
           style={{ fontSize: '0.78rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--brass)', display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '1.2rem' }}
         >
           <span style={{ width: 26, height: 1, background: 'var(--brass)', display: 'inline-block' }} />
-          2 Rue Taher Sfar, Nabeul
+          Avenue Mohamed Souissi, Nabeul
         </motion.span>
 
         <motion.h1
@@ -126,6 +125,16 @@ export default function Hero() {
             </span>
           ))}
         </motion.h1>
+
+        <motion.span
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="mono"
+          style={{ marginTop: '0.8rem', fontSize: '0.78rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--brass)', display: 'block' }}
+        >
+          Hair salon
+        </motion.span>
 
         <motion.p
           initial={{ opacity: 0, y: 15 }}
